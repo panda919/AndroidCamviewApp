@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CAMVIEW</string>
+
+    <string name="focus">Focus</string>
+    <string name="torch">Torch</string>
+    <string name="close">Close</string>
+
+</resources>
