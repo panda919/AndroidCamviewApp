@@ -17,23 +17,23 @@ Camera surface view is showing on Android Home screen as service.
 	-Camera SurfaceView(SurfaceView,PreviewSelfie)
 ### Getting started
     You need to start  **FloatingCamera_Back**Service.
-    ''''java
+```java
     Intent s = new Intent(MainActivity.this, FloatingCamera_Back.class);
         s.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startService(s);
-    ''''
+```
 ### Important
     -FloatingCamera_Back,FloatingCamera_Front as camera service
-	''''java
+```java
     Camera mCamera;
     Preview mPreview;
     mCamera = getCameraInstance();
     mPreview = new Preview(this, mCamera);
     FrameLayout preview = (FrameLayout) vG.findViewById(R.id.previewFrame);
     preview.addView(mPreview);
-	''''
+```
     -Preview,PreviewSelfie as Camera SurfaceView
-    ''''
+```java
 	 private static int getCameraDisplayOrientation(int displayRotation, int cameraId) {
         Log.d(TAG, "getCameraDisplayOrientation");
         CameraInfo info = new Camera.CameraInfo();
@@ -48,7 +48,7 @@ Camera surface view is showing on Android Home screen as service.
         }
         return result;
     }
-    ''''
+```
 ### Dependencies
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
